@@ -24,9 +24,9 @@ extension NewsEndPoint: EndPoint {
         return .get
     }
 
-    public var parameters: [String : AnyObject]? {
+    public var parameters: [String : Any]? {
         return [
-            "country": "us" as AnyObject
+            "country": "us"
         ]
     }
 

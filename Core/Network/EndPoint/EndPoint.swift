@@ -11,6 +11,6 @@ import Foundation
 public protocol EndPoint {
     var path: String { get }
     var htttpMethod: HTTPMethod { get }
-    var parameters: [String: AnyObject]? { get }
+    var parameters: [String: Any]? { get }
     var encoder: ParameterEncoder { get }
 }
