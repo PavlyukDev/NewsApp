@@ -41,6 +41,8 @@
 		518CEE7B210D901E00D0541E /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		518CEE7C210D901E00D0541E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE70210D8D3A00D0541E /* Result.framework */; };
 		518CEE7D210D901E00D0541E /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE70210D8D3A00D0541E /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		518CEE7F210D935100D0541E /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CEE7E210D935100D0541E /* NewsViewModel.swift */; };
+		518CEE81210D935F00D0541E /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CEE80210D935F00D0541E /* NewsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		518CEE6E210D8D3A00D0541E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		518CEE70210D8D3A00D0541E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		518CEE7E210D935100D0541E /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		518CEE80210D935F00D0541E /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,8 @@
 			children = (
 				514478CC210BA94B00C3B148 /* NewsCoordinator.swift */,
 				5144788B210BA4CA00C3B148 /* NewsViewController.swift */,
+				518CEE7E210D935100D0541E /* NewsViewModel.swift */,
+				518CEE80210D935F00D0541E /* NewsModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -434,8 +440,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				514478D2210BAABF00C3B148 /* Router.swift in Sources */,
+				518CEE7F210D935100D0541E /* NewsViewModel.swift in Sources */,
 				5144788C210BA4CA00C3B148 /* NewsViewController.swift in Sources */,
 				514478C7210BA77D00C3B148 /* Coordicator.swift in Sources */,
+				518CEE81210D935F00D0541E /* NewsModel.swift in Sources */,
 				5144786A210BA2DC00C3B148 /* AppDelegate.swift in Sources */,
 				514478C9210BA7C500C3B148 /* BaseCoordinator.swift in Sources */,
 				514478D0210BA97900C3B148 /* UIViewController+Extension.swift in Sources */,

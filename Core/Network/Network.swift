@@ -10,34 +10,35 @@ import Foundation
 import ReactiveSwift
 
 public struct Source: Decodable {
-    let id: String
-    let name: String?
+    public let id: String?
+    public let name: String?
 }
 
 public struct Article: Decodable {
-    let source: Source
-    let author: String?
-    let title: String?
-    let description: String?
-    let url: URL?
-    let urlToImage: URL?
-    let publishedAt: String?
+    public let source: Source
+    public let author: String?
+    public let title: String?
+    public let description: String?
+    public let url: URL?
+    public let urlToImage: URL?
+    public let publishedAt: String?
 }
 
 public struct Response: Decodable {
-    let status: String
-    let totalResults: Int
-    let articles: [Article]
+    public let status: String
+    public let totalResults: Int
+    public let articles: [Article]
 }
 
 public enum NetworkError: Error {
-
+    case serverError
 }
 
 public typealias NetworkCompletion = (Data?, URLResponse?, Error?) -> Void
 
 public protocol NetworkProtocol {
     func sendRequest(endpoint: EndPoint, completion: @escaping NetworkCompletion)
+    func sendRequest(endpoint: EndPoint) -> SignalProducer<(Data?, URLResponse?, Error?), NetworkError>
 }
 
 public class Network: NetworkProtocol {
