@@ -13,15 +13,18 @@ import Core
 class NewsViewModel {
     var articles: MutableProperty<[Article]> = MutableProperty([])
     let model: NewsModel
-    init(model: NewsModel) {
+    let sourceId: String
+
+    init(model: NewsModel, sourceId: String) {
         self.model = model
+        self.sourceId = sourceId
     }
 
     func loadArticles() {
-        model.loadNews().startWithResult { (result) in
+        model.loadNews(with: sourceId).startWithResult { [weak self] (result) in
             switch result {
             case let .success(response):
-                self.articles.value = response.articles
+                self?.articles.value = response.articles
             case .failure(_):
                 break
             }

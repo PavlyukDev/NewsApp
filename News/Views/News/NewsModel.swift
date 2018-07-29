@@ -17,8 +17,8 @@ class NewsModel {
         self.network = network
     }
 
-    func loadNews() -> SignalProducer<Response, NetworkError> {
-        return network.sendRequest(endpoint: NewsEndPoint.topHeadlines).attemptMap { value in
+    func loadNews(with sourceId: String) -> SignalProducer<Response, NetworkError> {
+        return network.sendRequest(endpoint: NewsEndPoint.topHeadlines(sourceId: sourceId)).attemptMap { value in
             guard let data = value.0 else {
                 return .failure(.serverError)
             }

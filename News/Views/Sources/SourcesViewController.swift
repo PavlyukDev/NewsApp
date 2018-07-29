@@ -48,3 +48,10 @@ extension SourcesViewController: UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
 }
+
+extension SourcesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        viewModel.openSource(byIndex: indexPath.row)
+    }
+}

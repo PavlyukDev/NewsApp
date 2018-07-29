@@ -61,6 +61,7 @@ public class Network: NetworkProtocol {
         return SignalProducer(){ [unowned self] observer, disposable in
             let dataTask = self.urlSession.dataTask(with: self.createRequest(withEndPoint: endpoint)) { data, response, error in
                 observer.send(value: (data, response, error))
+                observer.sendCompleted()
             }
             dataTask.resume()
         }
@@ -74,12 +75,6 @@ public class Network: NetworkProtocol {
         if let parameters = endPoint.parameters {
             // FIXME: Add error handling
             try? endPoint.encoder.encodeParameters(&request, parameters: parameters)
-//            guard let url = request.url,
-//                var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-//                    return request
-//            }
-//            components.queryItems?.append(URLQueryItem(name: "apiKey", value: Consts.apiKey))
-//            request.url = components.url
         }
 
         return request

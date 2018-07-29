@@ -10,7 +10,7 @@ import Foundation
 
 public enum NewsEndPoint {
     case sources
-    case topHeadlines
+    case topHeadlines(sourceId: String?)
 }
 
 extension NewsEndPoint: EndPoint {
@@ -31,12 +31,12 @@ extension NewsEndPoint: EndPoint {
         switch self {
         case .sources:
             return nil
-        case .topHeadlines:
+        case let .topHeadlines(sourceId):
+            guard let sourceId = sourceId else { return nil }
             return [
-                "country": "us"
+                "sources": sourceId
             ]
         }
-
     }
 
     public var encoder: ParameterEncoder {
