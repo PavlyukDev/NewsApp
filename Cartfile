@@ -1,0 +1,2 @@
+github "ReactiveCocoa/ReactiveSwift" ~> 3.0
+github "onevcat/Kingfisher" ~> 4.0

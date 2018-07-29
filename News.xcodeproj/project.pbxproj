@@ -30,6 +30,17 @@
 		514478D2210BAABF00C3B148 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514478D1210BAABF00C3B148 /* Router.swift */; };
 		514478D4210BB91700C3B148 /* NewsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514478D3210BB91700C3B148 /* NewsEndPoint.swift */; };
 		518CEE6B210D7E0200D0541E /* ParameterEncodersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CEE6A210D7E0200D0541E /* ParameterEncodersTest.swift */; };
+		518CEE72210D8D3A00D0541E /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */; };
+		518CEE73210D8D3A00D0541E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE70210D8D3A00D0541E /* Result.framework */; };
+		518CEE75210D8D9200D0541E /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */; };
+		518CEE76210D8D9500D0541E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE70210D8D3A00D0541E /* Result.framework */; };
+		518CEE77210D8D9B00D0541E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE6E210D8D3A00D0541E /* Kingfisher.framework */; };
+		518CEE78210D901E00D0541E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE6E210D8D3A00D0541E /* Kingfisher.framework */; };
+		518CEE79210D901E00D0541E /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE6E210D8D3A00D0541E /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		518CEE7A210D901E00D0541E /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */; };
+		518CEE7B210D901E00D0541E /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		518CEE7C210D901E00D0541E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE70210D8D3A00D0541E /* Result.framework */; };
+		518CEE7D210D901E00D0541E /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE70210D8D3A00D0541E /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +74,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				518CEE79210D901E00D0541E /* Kingfisher.framework in Embed Frameworks */,
 				514478B4210BA50400C3B148 /* Core.framework in Embed Frameworks */,
+				518CEE7B210D901E00D0541E /* ReactiveSwift.framework in Embed Frameworks */,
+				518CEE7D210D901E00D0541E /* Result.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +110,9 @@
 		514478D1210BAABF00C3B148 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		514478D3210BB91700C3B148 /* NewsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndPoint.swift; sourceTree = "<group>"; };
 		518CEE6A210D7E0200D0541E /* ParameterEncodersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncodersTest.swift; sourceTree = "<group>"; };
+		518CEE6E210D8D3A00D0541E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		518CEE70210D8D3A00D0541E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +120,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518CEE78210D901E00D0541E /* Kingfisher.framework in Frameworks */,
+				518CEE7C210D901E00D0541E /* Result.framework in Frameworks */,
 				514478B3210BA50400C3B148 /* Core.framework in Frameworks */,
+				518CEE72210D8D3A00D0541E /* ReactiveSwift.framework in Frameworks */,
+				518CEE77210D8D9B00D0541E /* Kingfisher.framework in Frameworks */,
+				518CEE73210D8D3A00D0541E /* Result.framework in Frameworks */,
+				518CEE7A210D901E00D0541E /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518CEE76210D8D9500D0541E /* Result.framework in Frameworks */,
+				518CEE75210D8D9200D0541E /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +157,7 @@
 				5144789F210BA50400C3B148 /* Core */,
 				514478AC210BA50400C3B148 /* CoreTests */,
 				51447867210BA2DC00C3B148 /* Products */,
+				518CEE6D210D8D3A00D0541E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -228,6 +254,16 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		518CEE6D210D8D3A00D0541E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				518CEE6E210D8D3A00D0541E /* Kingfisher.framework */,
+				518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */,
+				518CEE70210D8D3A00D0541E /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -250,6 +286,7 @@
 				51447863210BA2DC00C3B148 /* Frameworks */,
 				51447864210BA2DC00C3B148 /* Resources */,
 				514478B8210BA50400C3B148 /* Embed Frameworks */,
+				518CEE6C210D8B7400D0541E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -368,6 +405,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		518CEE6C210D8B7400D0541E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		51447862210BA2DC00C3B148 /* Sources */ = {
@@ -567,6 +626,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9CL5P9K65;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/News/Recources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -586,6 +649,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9CL5P9K65;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/News/Recources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -610,6 +677,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -640,6 +711,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

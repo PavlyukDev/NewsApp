@@ -7,6 +7,32 @@
 //
 
 import Foundation
+import ReactiveSwift
+
+public struct Source: Decodable {
+    let id: String
+    let name: String?
+}
+
+public struct Article: Decodable {
+    let source: Source
+    let author: String?
+    let title: String?
+    let description: String?
+    let url: URL?
+    let urlToImage: URL?
+    let publishedAt: String?
+}
+
+public struct Response: Decodable {
+    let status: String
+    let totalResults: Int
+    let articles: [Article]
+}
+
+public enum NetworkError: Error {
+
+}
 
 public typealias NetworkCompletion = (Data?, URLResponse?, Error?) -> Void
 
@@ -28,6 +54,15 @@ public class Network: NetworkProtocol {
     public func sendRequest(endpoint: EndPoint, completion: @escaping NetworkCompletion) {
         let dataTask = urlSession.dataTask(with: createRequest(withEndPoint: endpoint), completionHandler: completion)
         dataTask.resume()
+    }
+
+    public func sendRequest(endpoint: EndPoint) -> SignalProducer<(Data?, URLResponse?, Error?), NetworkError> {
+        return SignalProducer(){ [unowned self] observer, disposable in
+            let dataTask = self.urlSession.dataTask(with: self.createRequest(withEndPoint: endpoint)) { data, response, error in
+                observer.send(value: (data, response, error))
+            }
+            dataTask.resume()
+        }
     }
 
     private func createRequest(withEndPoint endPoint: EndPoint) -> URLRequest {
