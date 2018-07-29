@@ -18,6 +18,7 @@ class NewsViewController: UIViewController {
         viewModel.loadArticles()
         bind()
         setupTableView()
+        title = "Top headlines"
     }
 
     private func setupTableView() {

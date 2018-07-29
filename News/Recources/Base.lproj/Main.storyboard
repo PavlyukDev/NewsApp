@@ -44,5 +44,39 @@
             </objects>
             <point key="canvasLocation" x="806" y="229"/>
         </scene>
+        <!--Sources View Controller-->
+        <scene sceneID="Zs9-sI-ay3">
+            <objects>
+                <viewController storyboardIdentifier="SourcesViewController" id="VEg-gk-8ph" customClass="SourcesViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LZD-9d-xPD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dsJ-Ns-B3t">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VEg-gk-8ph" id="M2e-lO-lQj"/>
+                                    <outlet property="delegate" destination="VEg-gk-8ph" id="rlY-QO-xDM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dsJ-Ns-B3t" firstAttribute="leading" secondItem="1bV-2R-3La" secondAttribute="leading" id="TI6-wL-oWz"/>
+                            <constraint firstItem="1bV-2R-3La" firstAttribute="trailing" secondItem="dsJ-Ns-B3t" secondAttribute="trailing" id="fKP-I4-8rv"/>
+                            <constraint firstItem="1bV-2R-3La" firstAttribute="bottom" secondItem="dsJ-Ns-B3t" secondAttribute="bottom" id="oiS-KT-Wyy"/>
+                            <constraint firstItem="dsJ-Ns-B3t" firstAttribute="top" secondItem="1bV-2R-3La" secondAttribute="top" id="sib-7b-BaY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1bV-2R-3La"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="dsJ-Ns-B3t" id="bsX-8S-uWI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPB-0g-j4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1561" y="229"/>
+        </scene>
     </scenes>
 </document>

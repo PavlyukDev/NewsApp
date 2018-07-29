@@ -70,16 +70,18 @@ public class Network: NetworkProtocol {
         let url = baseUrl.appendingPathComponent(endPoint.path)
         var request = URLRequest(url: url)
         request.httpMethod = endPoint.htttpMethod.rawValue
+        request.addValue(Consts.apiKey, forHTTPHeaderField: "Authorization")
         if let parameters = endPoint.parameters {
             // FIXME: Add error handling
             try? endPoint.encoder.encodeParameters(&request, parameters: parameters)
-            guard let url = request.url,
-                var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-                    return request
-            }
-            components.queryItems?.append(URLQueryItem(name: "apiKey", value: Consts.apiKey))
-            request.url = components.url
+//            guard let url = request.url,
+//                var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+//                    return request
+//            }
+//            components.queryItems?.append(URLQueryItem(name: "apiKey", value: Consts.apiKey))
+//            request.url = components.url
         }
+
         return request
     }
 }

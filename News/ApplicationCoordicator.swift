@@ -10,7 +10,7 @@ import Foundation
 
 class ApplicationCoordinator: BaseCoordinator {
     override func start() {
-        let coordinator = NewsCoordinator(router: router)
+        let coordinator = SourcesCoordinator(router: router)
         coordinator.start()
         addChildCoordinator(coordinator)
     }
