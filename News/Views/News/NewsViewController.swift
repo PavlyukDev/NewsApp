@@ -17,6 +17,12 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
         viewModel.loadArticles()
         bind()
+        setupTableView()
+    }
+
+    private func setupTableView() {
+        tableView.tableFooterView = UIView()
+        tableView.register(UINib.init(nibName: String(describing: ArticleTableViewCell.self), bundle: Bundle.main), forCellReuseIdentifier: "ArticleCell")
     }
 
     private func bind() {
@@ -34,9 +40,9 @@ extension NewsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleCell", for: indexPath) as? ArticleTableViewCell
         let article = viewModel.articles.value[indexPath.row]
-        cell.textLabel?.text = article.title
-        return cell
+        cell?.setup(with: article)
+        return cell ?? UITableViewCell()
     }
 }
