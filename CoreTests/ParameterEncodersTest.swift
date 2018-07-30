@@ -9,7 +9,6 @@
 import XCTest
 @testable import Core
 
-
 class ParameterEncodersTest: XCTestCase {
     func testJSONEncoder() {
         let jsonEncoder = JSONParameterEncoder()

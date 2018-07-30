@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,7 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         applicationCoordinator = ApplicationCoordinator(router: router)
         applicationCoordinator.start()
 
+        setupKingfisherCacheSize()
+
         return true
+    }
+
+    private func setupKingfisherCacheSize() {
+        ImageCache.default.maxMemoryCost = 50 * 1024 * 1024
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

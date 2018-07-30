@@ -17,7 +17,7 @@ class BaseCoordinator: Coordicator {
     }
 
     func start() {
-        // must be implemented in subclasses 
+        assertionFailure("must be implemented in subclasses")
     }
 
     final func addChildCoordinator(_ coordinator: Coordicator) {
