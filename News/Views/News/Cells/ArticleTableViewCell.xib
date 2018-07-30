@@ -85,6 +85,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="articleDescription" destination="qta-XM-mBG" id="J97-er-byw"/>
                 <outlet property="articleImage" destination="ez1-eZ-WQj" id="KLb-zz-F33"/>

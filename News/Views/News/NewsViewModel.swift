@@ -11,6 +11,9 @@ import ReactiveSwift
 import Core
 
 class NewsViewModel {
+    private var page: UInt = 1
+    private var totalCount = 0
+    var isLoading: Bool = false
     var articles: MutableProperty<[Article]> = MutableProperty([])
     let model: NewsModel
     let sourceId: String
@@ -21,13 +24,22 @@ class NewsViewModel {
     }
 
     func loadArticles() {
-        model.loadNews(with: sourceId).startWithResult { [weak self] (result) in
+        isLoading = true
+        model.loadNews(with: sourceId, page: page).startWithResult { [weak self] (result) in
+            self?.isLoading = false
             switch result {
             case let .success(response):
-                self?.articles.value = response.articles
+                self?.totalCount = response.totalResults
+                self?.page += 1
+                self?.articles.value.append(contentsOf: response.articles)
             case .failure(_):
                 break
             }
         }
+    }
+
+    func loadMore() {
+        guard totalCount > articles.value.count, !isLoading else { return }
+        loadArticles()
     }
 }

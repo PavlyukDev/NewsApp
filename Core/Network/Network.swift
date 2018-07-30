@@ -9,27 +9,6 @@
 import Foundation
 import ReactiveSwift
 
-public struct Source: Decodable {
-    public let id: String?
-    public let name: String?
-}
-
-public struct Article: Decodable {
-    public let source: Source
-    public let author: String?
-    public let title: String?
-    public let description: String?
-    public let url: URL?
-    public let urlToImage: URL?
-    public let publishedAt: String?
-}
-
-public struct Response: Decodable {
-    public let status: String
-    public let totalResults: Int
-    public let articles: [Article]
-}
-
 public enum NetworkError: Error {
     case serverError
 }
@@ -43,7 +22,7 @@ public protocol NetworkProtocol {
 
 public class Network: NetworkProtocol {
     private enum Consts {
-        static let apiKey = "0071f0e02ffc4a0fbf80424888039ead"
+        static let apiKey = "d463d36853e04061aabe4c13abbeb16e"
     }
     private let baseUrl: URL
     private let urlSession = URLSession(configuration: .default)

@@ -10,7 +10,8 @@ import Foundation
 
 public enum NewsEndPoint {
     case sources
-    case topHeadlines(sourceId: String?)
+    case topHeadlines(sourceId: String?, page: UInt)
+    case everything(sourceId: String?, page: UInt)
 }
 
 extension NewsEndPoint: EndPoint {
@@ -20,6 +21,8 @@ extension NewsEndPoint: EndPoint {
             return "sources"
         case .topHeadlines:
             return "top-headlines"
+        case .everything:
+            return "everything"
         }
     }
 
@@ -31,10 +34,17 @@ extension NewsEndPoint: EndPoint {
         switch self {
         case .sources:
             return nil
-        case let .topHeadlines(sourceId):
+        case let .topHeadlines(sourceId, page):
             guard let sourceId = sourceId else { return nil }
             return [
-                "sources": sourceId
+                "sources": sourceId,
+                "page": "\(page)"
+            ]
+        case let .everything(sourceId, page):
+            guard let sourceId = sourceId else { return nil }
+            return [
+                "sources": sourceId,
+                "page": "\(page)"
             ]
         }
     }

@@ -7,36 +7,68 @@
 //
 
 import UIKit
+import SkeletonView
 
 class SourcesViewController: UIViewController {
     var viewModel: SourcesViewModel!
     @IBOutlet weak var tableView: UITableView!
-    
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.loadSources()
         bind()
         setupTableView()
-        tableView.tableFooterView = UIView()
+        view.showAnimatedGradientSkeleton()
+
         title = "Sources"
     }
 
     private func bind() {
         viewModel.sources.signal.observeValues {[weak self] _ in
             DispatchQueue.main.async {
+                self?.finishLoading()
                 self?.tableView.reloadData()
+            }
+        }
+
+        viewModel.errorMessage.signal.observeValues { [weak self] value in
+            DispatchQueue.main.async {
+                self?.finishLoading()
             }
         }
     }
 
     private func setupTableView() {
+        tableView.tableFooterView = UIView()
+        tableView.isSkeletonable = true
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
+
         tableView.register(UINib.init(nibName: String(describing: SourceTableViewCell.self),
                                       bundle: Bundle.main),
                            forCellReuseIdentifier: "SourceCell")
+        tableView.register(UINib.init(nibName: String(describing: SkeletonCell.self),
+                                      bundle: Bundle.main),
+                           forCellReuseIdentifier: "SkeletonCell")
+    }
+
+    private func finishLoading() {
+        if view.isSkeletonActive {
+            view.hideSkeleton()
+        }
     }
 }
 
-extension SourcesViewController: UITableViewDataSource {
+extension SourcesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        viewModel.openSource(byIndex: indexPath.row)
+    }
+}
+
+extension SourcesViewController: SkeletonTableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.sources.value.count
     }
@@ -47,11 +79,13 @@ extension SourcesViewController: UITableViewDataSource {
         cell?.setup(with: source)
         return cell ?? UITableViewCell()
     }
-}
 
-extension SourcesViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        viewModel.openSource(byIndex: indexPath.row)
+    public func numSections(in collectionSkeletonView: UITableView) -> Int {
+        return 3
+    }
+
+    public func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier
+    {
+        return "SkeletonCell"
     }
 }

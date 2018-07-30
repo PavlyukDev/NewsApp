@@ -14,7 +14,6 @@
 		51447897210BA4E300C3B148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51447892210BA4E300C3B148 /* Main.storyboard */; };
 		51447898210BA4E300C3B148 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51447894210BA4E300C3B148 /* Info.plist */; };
 		514478A7210BA50400C3B148 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5144789E210BA50400C3B148 /* Core.framework */; };
-		514478AE210BA50400C3B148 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514478AD210BA50400C3B148 /* CoreTests.swift */; };
 		514478B0210BA50400C3B148 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 514478A0210BA50400C3B148 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		514478B3210BA50400C3B148 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5144789E210BA50400C3B148 /* Core.framework */; };
 		514478B4210BA50400C3B148 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5144789E210BA50400C3B148 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -25,10 +24,14 @@
 		514478C7210BA77D00C3B148 /* Coordicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514478C6210BA77D00C3B148 /* Coordicator.swift */; };
 		514478C9210BA7C500C3B148 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514478C8210BA7C500C3B148 /* BaseCoordinator.swift */; };
 		514478CB210BA7E100C3B148 /* ApplicationCoordicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514478CA210BA7E100C3B148 /* ApplicationCoordicator.swift */; };
-		514478CD210BA94B00C3B148 /* NewsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514478CC210BA94B00C3B148 /* NewsCoordinator.swift */; };
 		514478D0210BA97900C3B148 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514478CF210BA97900C3B148 /* UIViewController+Extension.swift */; };
 		514478D2210BAABF00C3B148 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514478D1210BAABF00C3B148 /* Router.swift */; };
 		514478D4210BB91700C3B148 /* NewsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514478D3210BB91700C3B148 /* NewsEndPoint.swift */; };
+		515EAD4F210FAB1B007E12C4 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EAD4D210FAB1B007E12C4 /* SkeletonCell.swift */; };
+		515EAD50210FAB1B007E12C4 /* SkeletonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515EAD4E210FAB1B007E12C4 /* SkeletonCell.xib */; };
+		517D6E3E210F9FB000B19119 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517D6E3D210F9FB000B19119 /* SkeletonView.framework */; };
+		517D6E3F210F9FB600B19119 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517D6E3D210F9FB000B19119 /* SkeletonView.framework */; };
+		517D6E40210F9FB600B19119 /* SkeletonView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 517D6E3D210F9FB000B19119 /* SkeletonView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		518CEE6B210D7E0200D0541E /* ParameterEncodersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518CEE6A210D7E0200D0541E /* ParameterEncodersTest.swift */; };
 		518CEE72210D8D3A00D0541E /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */; };
 		518CEE73210D8D3A00D0541E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518CEE70210D8D3A00D0541E /* Result.framework */; };
@@ -84,6 +87,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				517D6E40210F9FB600B19119 /* SkeletonView.framework in Embed Frameworks */,
 				518CEE79210D901E00D0541E /* Kingfisher.framework in Embed Frameworks */,
 				514478B4210BA50400C3B148 /* Core.framework in Embed Frameworks */,
 				518CEE7B210D901E00D0541E /* ReactiveSwift.framework in Embed Frameworks */,
@@ -106,7 +110,6 @@
 		514478A0210BA50400C3B148 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		514478A1210BA50400C3B148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		514478A6210BA50400C3B148 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		514478AD210BA50400C3B148 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		514478AF210BA50400C3B148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		514478BD210BA59A00C3B148 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		514478C0210BA5C200C3B148 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -115,10 +118,12 @@
 		514478C6210BA77D00C3B148 /* Coordicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordicator.swift; sourceTree = "<group>"; };
 		514478C8210BA7C500C3B148 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		514478CA210BA7E100C3B148 /* ApplicationCoordicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordicator.swift; sourceTree = "<group>"; };
-		514478CC210BA94B00C3B148 /* NewsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCoordinator.swift; sourceTree = "<group>"; };
 		514478CF210BA97900C3B148 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		514478D1210BAABF00C3B148 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		514478D3210BB91700C3B148 /* NewsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndPoint.swift; sourceTree = "<group>"; };
+		515EAD4D210FAB1B007E12C4 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
+		515EAD4E210FAB1B007E12C4 /* SkeletonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeletonCell.xib; sourceTree = "<group>"; };
+		517D6E3D210F9FB000B19119 /* SkeletonView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkeletonView.framework; path = Carthage/Build/iOS/SkeletonView.framework; sourceTree = "<group>"; };
 		518CEE6A210D7E0200D0541E /* ParameterEncodersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncodersTest.swift; sourceTree = "<group>"; };
 		518CEE6E210D8D3A00D0541E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -142,6 +147,8 @@
 			files = (
 				518CEE78210D901E00D0541E /* Kingfisher.framework in Frameworks */,
 				518CEE7C210D901E00D0541E /* Result.framework in Frameworks */,
+				517D6E3F210F9FB600B19119 /* SkeletonView.framework in Frameworks */,
+				517D6E3E210F9FB000B19119 /* SkeletonView.framework in Frameworks */,
 				514478B3210BA50400C3B148 /* Core.framework in Frameworks */,
 				518CEE72210D8D3A00D0541E /* ReactiveSwift.framework in Frameworks */,
 				518CEE77210D8D9B00D0541E /* Kingfisher.framework in Frameworks */,
@@ -209,6 +216,7 @@
 		5144788A210BA4CA00C3B148 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				515EAD52210FAB37007E12C4 /* SkeletonCell */,
 				518CEE89210E584300D0541E /* Sources */,
 				518CEE84210E4D8600D0541E /* News */,
 			);
@@ -239,7 +247,6 @@
 		514478AC210BA50400C3B148 /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				514478AD210BA50400C3B148 /* CoreTests.swift */,
 				518CEE6A210D7E0200D0541E /* ParameterEncodersTest.swift */,
 				514478AF210BA50400C3B148 /* Info.plist */,
 			);
@@ -274,9 +281,37 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		515EAD51210FAB27007E12C4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				518CEE92210E5C7600D0541E /* SourceTableViewCell.swift */,
+				518CEE93210E5C7600D0541E /* SourceTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		515EAD52210FAB37007E12C4 /* SkeletonCell */ = {
+			isa = PBXGroup;
+			children = (
+				515EAD4D210FAB1B007E12C4 /* SkeletonCell.swift */,
+				515EAD4E210FAB1B007E12C4 /* SkeletonCell.xib */,
+			);
+			path = SkeletonCell;
+			sourceTree = "<group>";
+		};
+		515EAD53210FAFBA007E12C4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				518CEE85210E4DAC00D0541E /* ArticleTableViewCell.swift */,
+				518CEE86210E4DAC00D0541E /* ArticleTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		518CEE6D210D8D3A00D0541E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				517D6E3D210F9FB000B19119 /* SkeletonView.framework */,
 				518CEE6E210D8D3A00D0541E /* Kingfisher.framework */,
 				518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */,
 				518CEE70210D8D3A00D0541E /* Result.framework */,
@@ -287,12 +322,10 @@
 		518CEE84210E4D8600D0541E /* News */ = {
 			isa = PBXGroup;
 			children = (
-				514478CC210BA94B00C3B148 /* NewsCoordinator.swift */,
+				515EAD53210FAFBA007E12C4 /* Cells */,
 				5144788B210BA4CA00C3B148 /* NewsViewController.swift */,
 				518CEE7E210D935100D0541E /* NewsViewModel.swift */,
 				518CEE80210D935F00D0541E /* NewsModel.swift */,
-				518CEE85210E4DAC00D0541E /* ArticleTableViewCell.swift */,
-				518CEE86210E4DAC00D0541E /* ArticleTableViewCell.xib */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -300,12 +333,11 @@
 		518CEE89210E584300D0541E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				515EAD51210FAB27007E12C4 /* Cells */,
 				518CEE8C210E586C00D0541E /* SourcesCoordinator.swift */,
 				518CEE8A210E585A00D0541E /* SourcesViewController.swift */,
 				518CEE8E210E587B00D0541E /* SourcesViewModel.swift */,
 				518CEE90210E588400D0541E /* SourcesModel.swift */,
-				518CEE92210E5C7600D0541E /* SourceTableViewCell.swift */,
-				518CEE93210E5C7600D0541E /* SourceTableViewCell.xib */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -432,6 +464,7 @@
 				518CEE88210E4DAC00D0541E /* ArticleTableViewCell.xib in Resources */,
 				51447898210BA4E300C3B148 /* Info.plist in Resources */,
 				51447897210BA4E300C3B148 /* Main.storyboard in Resources */,
+				515EAD50210FAB1B007E12C4 /* SkeletonCell.xib in Resources */,
 				51447895210BA4E300C3B148 /* Assets.xcassets in Resources */,
 				518CEE95210E5C7600D0541E /* SourceTableViewCell.xib in Resources */,
 				51447896210BA4E300C3B148 /* LaunchScreen.storyboard in Resources */,
@@ -464,11 +497,13 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SkeletonView.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SkeletonView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = "/usr/local/bin/carthage copy-frameworks";
@@ -483,6 +518,7 @@
 			files = (
 				514478D2210BAABF00C3B148 /* Router.swift in Sources */,
 				518CEE7F210D935100D0541E /* NewsViewModel.swift in Sources */,
+				515EAD4F210FAB1B007E12C4 /* SkeletonCell.swift in Sources */,
 				5144788C210BA4CA00C3B148 /* NewsViewController.swift in Sources */,
 				514478C7210BA77D00C3B148 /* Coordicator.swift in Sources */,
 				518CEE81210D935F00D0541E /* NewsModel.swift in Sources */,
@@ -495,7 +531,6 @@
 				514478C9210BA7C500C3B148 /* BaseCoordinator.swift in Sources */,
 				514478D0210BA97900C3B148 /* UIViewController+Extension.swift in Sources */,
 				514478CB210BA7E100C3B148 /* ApplicationCoordicator.swift in Sources */,
-				514478CD210BA94B00C3B148 /* NewsCoordinator.swift in Sources */,
 				518CEE91210E588400D0541E /* SourcesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,7 +551,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				514478AE210BA50400C3B148 /* CoreTests.swift in Sources */,
 				518CEE6B210D7E0200D0541E /* ParameterEncodersTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

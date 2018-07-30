@@ -29,8 +29,5 @@ class SourcesCoordinator: BaseCoordinator {
         let viewController: NewsViewController = NewsViewController.instantiate(storyboardName: "Main")
         viewController.viewModel = viewModel
         router.push(viewController)
-//        let coordinator = NewsCoordinator(router: router, sourceId: sourceId)
-//        coordinator.start()
-//        addChildCoordinator(coordinator)
     }
 }
