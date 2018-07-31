@@ -13,17 +13,19 @@ import Core
 class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var articleImage: UIImageView!
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var articleDescription: UILabel!
+    @IBOutlet weak var articleDescription: UITextView!
     @IBOutlet weak var author: UILabel!
     @IBOutlet weak var publishedDate: UILabel!
 
     func setup(with article: Article) {
         title.text = article.title
-        articleDescription.text = article.description
         author.text = article.author ?? "Unknown"
         articleImage.kf.setImage(with: article.urlToImage,
                                  placeholder: #imageLiteral(resourceName: "icon_news_image_placeholder"))
         publishedDate.text = setupPublishedDate(article.publishedAt)
+        let imagePath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 140, height: 70))
+        articleDescription.textContainer.exclusionPaths = [imagePath]
+        articleDescription.text = article.description
     }
 
     private func setupPublishedDate(_ publishedAt: String?) -> String? {

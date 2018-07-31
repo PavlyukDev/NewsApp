@@ -8,9 +8,9 @@
 
 import UIKit
 import Core
+import SkeletonView
 
 class NewsViewController: BaseViewController {
-    
     var viewModel: NewsViewModel!
     @IBOutlet weak var tableView: UITableView!
 
@@ -18,16 +18,14 @@ class NewsViewController: BaseViewController {
         super.viewDidLoad()
         bind()
         setupTableView()
-        view.showAnimatedGradientSkeleton()
         title = "Everything"
         viewModel.loadArticles()
     }
 
     private func setupTableView() {
-        tableView.isSkeletonable = true
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 140
         tableView.tableFooterView = UIView()
+        tableView.isSkeletonable = true
+        tableView.estimatedRowHeight = 150
         tableView.refreshControl = refreshControl
         
         tableView.register(UINib.init(nibName: String(describing: ArticleTableViewCell.self), bundle: Bundle.main), forCellReuseIdentifier: "ArticleCell")
@@ -60,7 +58,7 @@ class NewsViewController: BaseViewController {
     }
 }
 
-extension NewsViewController: UITableViewDataSource {
+extension NewsViewController: SkeletonTableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.articles.value.count
     }
@@ -73,5 +71,18 @@ extension NewsViewController: UITableViewDataSource {
             viewModel.loadMore()
         }
         return cell ?? UITableViewCell()
+    }
+
+    func numSections(in collectionSkeletonView: UITableView) -> Int {
+        return 3
+    }
+
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier
+    {
+        return "SkeletonCell"
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }

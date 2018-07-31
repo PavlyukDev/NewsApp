@@ -16,6 +16,7 @@ class SourcesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+
         setupTableView()
         view.showAnimatedGradientSkeleton()
         title = "Sources"
@@ -41,7 +42,6 @@ class SourcesViewController: BaseViewController {
     private func setupTableView() {
         tableView.tableFooterView = UIView()
         tableView.isSkeletonable = true
-        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
         tableView.refreshControl = refreshControl
 
@@ -84,12 +84,16 @@ extension SourcesViewController: SkeletonTableViewDataSource {
         return cell ?? UITableViewCell()
     }
 
-    public func numSections(in collectionSkeletonView: UITableView) -> Int {
+    func numSections(in collectionSkeletonView: UITableView) -> Int {
         return 3
     }
 
-    public func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier
     {
         return "SkeletonCell"
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }
