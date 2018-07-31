@@ -29,6 +29,11 @@
 		514478D4210BB91700C3B148 /* NewsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514478D3210BB91700C3B148 /* NewsEndPoint.swift */; };
 		515EAD4F210FAB1B007E12C4 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EAD4D210FAB1B007E12C4 /* SkeletonCell.swift */; };
 		515EAD50210FAB1B007E12C4 /* SkeletonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515EAD4E210FAB1B007E12C4 /* SkeletonCell.xib */; };
+		515FBFC5211031A800E76723 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FBFC4211031A800E76723 /* UIViewController+Alert.swift */; };
+		515FBFC9211033F800E76723 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515FBFC7211033F400E76723 /* Reachability.framework */; };
+		515FBFCA2110340D00E76723 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515FBFC7211033F400E76723 /* Reachability.framework */; };
+		515FBFCB2110340D00E76723 /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 515FBFC7211033F400E76723 /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		515FBFCD211039B400E76723 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FBFCC211039B400E76723 /* BaseViewController.swift */; };
 		517D6E3E210F9FB000B19119 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517D6E3D210F9FB000B19119 /* SkeletonView.framework */; };
 		517D6E3F210F9FB600B19119 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517D6E3D210F9FB000B19119 /* SkeletonView.framework */; };
 		517D6E40210F9FB600B19119 /* SkeletonView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 517D6E3D210F9FB000B19119 /* SkeletonView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -88,6 +93,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				517D6E40210F9FB600B19119 /* SkeletonView.framework in Embed Frameworks */,
+				515FBFCB2110340D00E76723 /* Reachability.framework in Embed Frameworks */,
 				518CEE79210D901E00D0541E /* Kingfisher.framework in Embed Frameworks */,
 				514478B4210BA50400C3B148 /* Core.framework in Embed Frameworks */,
 				518CEE7B210D901E00D0541E /* ReactiveSwift.framework in Embed Frameworks */,
@@ -123,6 +129,9 @@
 		514478D3210BB91700C3B148 /* NewsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndPoint.swift; sourceTree = "<group>"; };
 		515EAD4D210FAB1B007E12C4 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		515EAD4E210FAB1B007E12C4 /* SkeletonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkeletonCell.xib; sourceTree = "<group>"; };
+		515FBFC4211031A800E76723 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		515FBFC7211033F400E76723 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
+		515FBFCC211039B400E76723 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		517D6E3D210F9FB000B19119 /* SkeletonView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SkeletonView.framework; path = Carthage/Build/iOS/SkeletonView.framework; sourceTree = "<group>"; };
 		518CEE6A210D7E0200D0541E /* ParameterEncodersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncodersTest.swift; sourceTree = "<group>"; };
 		518CEE6E210D8D3A00D0541E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -152,6 +161,7 @@
 				514478B3210BA50400C3B148 /* Core.framework in Frameworks */,
 				518CEE72210D8D3A00D0541E /* ReactiveSwift.framework in Frameworks */,
 				518CEE77210D8D9B00D0541E /* Kingfisher.framework in Frameworks */,
+				515FBFCA2110340D00E76723 /* Reachability.framework in Frameworks */,
 				518CEE73210D8D3A00D0541E /* Result.framework in Frameworks */,
 				518CEE7A210D901E00D0541E /* ReactiveSwift.framework in Frameworks */,
 			);
@@ -162,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				518CEE76210D8D9500D0541E /* Result.framework in Frameworks */,
+				515FBFC9211033F800E76723 /* Reachability.framework in Frameworks */,
 				518CEE75210D8D9200D0541E /* ReactiveSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +227,8 @@
 		5144788A210BA4CA00C3B148 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				515FBFCE211039EF00E76723 /* BaseViewController */,
+				515FBFC6211031AD00E76723 /* AlertViewController */,
 				515EAD52210FAB37007E12C4 /* SkeletonCell */,
 				518CEE89210E584300D0541E /* Sources */,
 				518CEE84210E4D8600D0541E /* News */,
@@ -308,9 +321,26 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		515FBFC6211031AD00E76723 /* AlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				515FBFC4211031A800E76723 /* UIViewController+Alert.swift */,
+			);
+			path = AlertViewController;
+			sourceTree = "<group>";
+		};
+		515FBFCE211039EF00E76723 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				515FBFCC211039B400E76723 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
 		518CEE6D210D8D3A00D0541E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				515FBFC7211033F400E76723 /* Reachability.framework */,
 				517D6E3D210F9FB000B19119 /* SkeletonView.framework */,
 				518CEE6E210D8D3A00D0541E /* Kingfisher.framework */,
 				518CEE6F210D8D3A00D0541E /* ReactiveSwift.framework */,
@@ -498,12 +528,14 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SkeletonView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SkeletonView.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Reachability.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = "/usr/local/bin/carthage copy-frameworks";
@@ -519,10 +551,12 @@
 				514478D2210BAABF00C3B148 /* Router.swift in Sources */,
 				518CEE7F210D935100D0541E /* NewsViewModel.swift in Sources */,
 				515EAD4F210FAB1B007E12C4 /* SkeletonCell.swift in Sources */,
+				515FBFC5211031A800E76723 /* UIViewController+Alert.swift in Sources */,
 				5144788C210BA4CA00C3B148 /* NewsViewController.swift in Sources */,
 				514478C7210BA77D00C3B148 /* Coordicator.swift in Sources */,
 				518CEE81210D935F00D0541E /* NewsModel.swift in Sources */,
 				518CEE8F210E587B00D0541E /* SourcesViewModel.swift in Sources */,
+				515FBFCD211039B400E76723 /* BaseViewController.swift in Sources */,
 				518CEE8B210E585A00D0541E /* SourcesViewController.swift in Sources */,
 				518CEE8D210E586C00D0541E /* SourcesCoordinator.swift in Sources */,
 				518CEE94210E5C7600D0541E /* SourceTableViewCell.swift in Sources */,

@@ -1,3 +1,4 @@
 github "ReactiveCocoa/ReactiveSwift" ~> 3.0
 github "Juanpe/SkeletonView"
 github "onevcat/Kingfisher" ~> 4.0
+github "ashleymills/Reachability.swift"

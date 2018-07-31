@@ -9,20 +9,17 @@
 import UIKit
 import SkeletonView
 
-class SourcesViewController: UIViewController {
+class SourcesViewController: BaseViewController {
     var viewModel: SourcesViewModel!
     @IBOutlet weak var tableView: UITableView!
 
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.loadSources()
         bind()
         setupTableView()
         view.showAnimatedGradientSkeleton()
-
         title = "Sources"
+        viewModel.loadSources()
     }
 
     private func bind() {
@@ -36,6 +33,7 @@ class SourcesViewController: UIViewController {
         viewModel.errorMessage.signal.observeValues { [weak self] value in
             DispatchQueue.main.async {
                 self?.finishLoading()
+                self?.showOkAlert(title: "Cannot load data", message: value)
             }
         }
     }
@@ -45,6 +43,7 @@ class SourcesViewController: UIViewController {
         tableView.isSkeletonable = true
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
+        tableView.refreshControl = refreshControl
 
         tableView.register(UINib.init(nibName: String(describing: SourceTableViewCell.self),
                                       bundle: Bundle.main),
@@ -58,6 +57,11 @@ class SourcesViewController: UIViewController {
         if view.isSkeletonActive {
             view.hideSkeleton()
         }
+        refreshControl.endRefreshing()
+    }
+
+    override func refresh() {
+        viewModel.loadSources()
     }
 }
 

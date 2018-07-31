@@ -15,6 +15,7 @@ class NewsViewModel {
     private var totalCount = 0
     var isLoading: Bool = false
     var articles: MutableProperty<[Article]> = MutableProperty([])
+    var errorMessage: MutableProperty<String?> = MutableProperty(nil)
     let model: NewsModel
     let sourceId: String
 
@@ -32,8 +33,8 @@ class NewsViewModel {
                 self?.totalCount = response.totalResults
                 self?.page += 1
                 self?.articles.value.append(contentsOf: response.articles)
-            case .failure(_):
-                break
+            case let .failure(error):
+                self?.errorMessage.value = error.localizedDescription
             }
         }
     }

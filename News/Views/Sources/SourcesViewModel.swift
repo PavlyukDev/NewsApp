@@ -13,7 +13,7 @@ class SourcesViewModel {
     private let model: SourcesModel
     var openHandler: (_ sourceId: String) -> Void
     var sources: MutableProperty<[Source]> = MutableProperty([])
-    var errorMessage: MutableProperty<String?> = MutableProperty(nil)
+    var errorMessage: MutableProperty<String> = MutableProperty("")
 
     init(model: SourcesModel, openHandler: @escaping (String) -> Void) {
         self.model = model
